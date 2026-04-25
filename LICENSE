@@ -1,0 +1,111 @@
+MIT License
+
+Copyright (c) 2026 Merlin Elvers
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+Third-party notices
+===================
+
+TT-Toolbox
+----------
+
+tensorlib/laplacian_mpo.py is a Python port of exp/tt_qlaplace_dd.m from
+TT-Toolbox. The port changes the implementation language and tensor-axis
+layout, but retains the construction given by the reference implementation.
+
+Project: https://github.com/oseledets/TT-Toolbox
+Source revision: 40d0d9dbef4195155be52730d4f30ca2ecf7b74e
+Reference file:
+https://github.com/oseledets/TT-Toolbox/blob/40d0d9dbef4195155be52730d4f30ca2ecf7b74e/exp/tt_qlaplace_dd.m
+License: MIT
+
+The upstream copyright and license notice follows verbatim:
+
+Copyright (C) 2009-2012 Ivan Oseledets, Sergey Dolgov, Vladimir Kazeev,
+Thomas Mach, Olga Lebedeva, Dmitry Savostyanov, Pavel Zhlobich, Le Song
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+tensor4all-rs
+-------------
+
+The carry-based construction in tensorlib/shift.py is derived from the shift
+operator in the tensor4all-quanticstransform crate. The Python implementation
+uses least-significant-bit-first ordering and contracts the operator directly
+into the MPS cores instead of returning a separate MPO.
+
+Project: https://github.com/tensor4all/tensor4all-rs
+Source revision: fd61f082c7d2234db2e7b88e73e5fd1f5a0c4228
+Reference file:
+https://github.com/tensor4all/tensor4all-rs/blob/fd61f082c7d2234db2e7b88e73e5fd1f5a0c4228/crates/tensor4all-quanticstransform/src/shift.rs
+License: MIT
+Upstream lineage: the tensor4all-quanticstransform crate identifies itself as
+a port of Quantics.jl (https://github.com/tensor4all/Quantics.jl), validated
+against version 0.4.7.
+
+The tensor4all-rs copyright and license notice follows verbatim:
+
+MIT License
+
+Copyright (c) 2024 tensor4all collaboration
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+External dependencies
+---------------------
+
+The project uses, but does not redistribute, third-party packages including
+NumPy, Matplotlib, and Xfac. Xfac is fetched by install.sh from a pinned
+revision and is distributed by its authors under the BSD 2-Clause License.
